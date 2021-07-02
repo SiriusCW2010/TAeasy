@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SpeechToTextActivity">
+
+    <ImageView
+        android:id="@+id/icon_Stt"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:src="@drawable/speech_to_text"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintVertical_bias="0.04"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/Stt_title_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Speech-To-Text Tool\n語音轉文字工具"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"/>
+
+    <EditText
+        android:id="@+id/D1_statement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:hint="Tap to Speak"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.35" />
+
+    <ImageButton
+        android:id="@+id/speech_text_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/speech_to_text_off"
+        android:scaleType="centerInside"
+        android:background="#00FFFFFF"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/D1_statement"
+        app:layout_constraintBottom_toTopOf="@id/confirm_button3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/confirm_button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="確 定"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/speech_text_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

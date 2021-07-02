@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OCRScanActivity">
+
+    <ImageView
+        android:id="@+id/card_scan_icon"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:src="@drawable/card_scan_icon"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintVertical_bias="0.04"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/record6_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OCR License/ID Scan\nOCR駕駛執照/ID掃描"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <SurfaceView
+        android:id="@+id/SurView_2"
+        android:layout_width="400dp"
+        android:layout_height="450dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.3"/>
+
+    <ImageView
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/card_scan_frame"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.35"/>
+
+
+    <TableLayout
+        android:id="@+id/Tab_lay_OCR1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintTop_toBottomOf="@id/SurView_2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_10"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="司機姓名">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/D1_name_OCR"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapCharacters">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:text="  "/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_11"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="性別">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/D1_sex_OCR"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:text="  "/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_12"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="出生日期">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/D1_DOB_OCR"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="date">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/Tab_lay_OCR2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintTop_toBottomOf="@id/Tab_lay_OCR1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_13"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="駕駛執照號碼">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/D1_driving_lic"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="9">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:text="  "/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_14"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="屆滿日期">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/D1_driving_lic_exp"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:maxLength="10">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:text="  "/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_15"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="可駕駛類別">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/D1_driving_lic_cat"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLength="99">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/confirm_button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="確 定"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/Tab_lay_OCR2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".RecordActivity5"
+    tools:showIn="@layout/activity_record5">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+            android:id="@+id/Tab_lay_D1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1. 車輛詳情"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_lay_D2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_lay_D1">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_5"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="*V1車牌號碼"
+                android:layout_alignParentLeft="true"
+                app:helperText="*必須輸入"
+                app:helperTextTextColor="#FF0000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/V1_Reg_No"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:maxLength="8"
+                    android:inputType="textCapCharacters">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:text="  "/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_6"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="V1牌照號碼"
+                android:layout_alignParentLeft="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/V1_Lic_No"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLength="8"
+                    android:textAllCaps="true">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:text="  "/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_7"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="屆滿日期"
+                android:layout_alignParentLeft="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/V1_Exp_Date"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:maxLength="10">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_D3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_lay_D2">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_8"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="車廠"
+                    android:layout_alignParentLeft="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/V1_Brand"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapCharacters">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:text="  "/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_9"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="顏色"
+                    android:layout_alignParentLeft="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/V1_Colour"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapCharacters">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:text="  "/>
+
+                <Spinner
+                    android:id="@+id/Veh_Type_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawSelectorOnTop="true"
+                    android:spinnerMode="dialog"
+                    android:layout_gravity="center"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_D4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_D3"
+            android:stretchColumns="0">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:text="  "/>
+
+                <ImageButton
+                    android:id="@+id/veh_check"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="#00FFFFFF"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/veh_search_icon"/>
+
+                <TextView
+                    android:text="  "/>
+
+                <ImageButton
+                    android:id="@+id/qr_scan"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="#00FFFFFF"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/qr_scan_icon"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_D5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_D4">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:text="2. D1司機詳情"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_D6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_D5">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_10"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="*司機姓名"
+                app:helperText="*必須輸入"
+                app:helperTextTextColor="#FF0000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/D1_name"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapCharacters">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:text="  "/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_11"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="性別">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/D1_sex"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="text">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:text="  "/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_12"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="出生日期">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/D1_DOB"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="date">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_D7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_D6">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_13"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="*駕駛執照號碼"
+                    app:helperText="*必須輸入"
+                    app:helperTextTextColor="#FF0000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/D1_driving_lic"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="9">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:text="  "/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_14"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="屆滿日期">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/D1_driving_lic_exp"
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:maxLength="10">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:text="  "/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_15"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="可駕駛類別">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/D1_driving_lic_cat"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLength="99">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_D8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_D7">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_16"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="地址">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/D1_address"
+                        android:layout_width="355dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="text">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_D9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_D8"
+            android:stretchColumns="0">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_17"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="電話"
+                    android:layout_alignParentLeft="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/D1_contact"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="8">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageButton
+                    android:id="@+id/valid4_check"
+                    android:layout_height="50dp"
+                    android:layout_width="50dp"
+                    android:src="@drawable/valid4_icon"
+                    android:background="#00FFFFFF"
+                    android:scaleType="centerInside"
+                    android:layout_gravity="center_vertical"
+                    android:layout_alignParentRight="true"/>
+
+                <TextView
+                    android:text="  "/>
+
+                <ImageButton
+                    android:id="@+id/card_scan"
+                    android:layout_height="50dp"
+                    android:layout_width="50dp"
+                    android:src="@drawable/card_scan_icon"
+                    android:background="#00FFFFFF"
+                    android:scaleType="centerInside"
+                    android:layout_gravity="center_vertical"
+                    android:layout_alignParentRight="true"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_D10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_D9">
+
+        <TextView
+            android:text="限制事項"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <RadioGroup>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="甲-駕駛時須戴矯正視力的眼鏡"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="乙-駕駛時須戴助聽器"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="無"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical"/>
+        </RadioGroup>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_D11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_D10">
+
+                <TextView
+                    android:text="是否需要發出Pol 16"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"/>
+
+            <RadioGroup>
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="是"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"/>
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="否"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"/>
+
+            </RadioGroup>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_D12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_D11">
+
+            <TextView
+                android:text="如是，請司機呈交以下文件:-"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+
+            <RadioGroup>
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="保險單 (適用於意外時行車證已過期)"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"/>
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="駕駛執照 (適用於意外時未有出示駕駛執照)"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"/>
+
+            </RadioGroup>
+
+            <TableRow>
+
+                <TextView
+                    android:text="呈交地點為: "
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical"/>
+
+                <Spinner
+                    android:id="@+id/Pol_Stn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:drawSelectorOnTop="true"
+                    android:spinnerMode="dialog"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:text="警署"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_D13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_D12">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="3. D1司機對事件的簡述"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp">
+            </TextView>
+
+        </TableRow>
+
+        </TableLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Tab_Lay_D14"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_D13">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/D1_statement"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black"
+                android:scrollbars="vertical"
+                android:gravity="left|top">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_D15"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_D14">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageButton
+                    android:id="@+id/speech_text_1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/speech_to_text"
+                    android:scaleType="centerInside"
+                    android:background="#00FFFFFF"
+                    android:gravity="center"/>
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_D16"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_D15">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="本人 "
+                    android:textSize="16sp"
+                    android:textColor="@color/black">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/text_watch_1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="5dp">
+                </TextView>
+
+                <RadioGroup
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:text="同意"
+                        android:textSize="16sp"
+                        android:layout_gravity="center_vertical"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:text="不同意  "
+                        android:textSize="16sp"
+                        android:layout_gravity="center_vertical"/>
+
+                </RadioGroup>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/disclaimer"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:text="@string/disclaimer_chi"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_D16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+        </TextView>
+
+        <RelativeLayout
+            android:id="@+id/RelativeLay_D1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:stretchColumns="0"
+            app:layout_constraintTop_toBottomOf="@id/disclaimer"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <Button
+                android:id="@+id/ButtonUp_4"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="上一步"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_alignParentLeft="true">
+            </Button>
+
+            <Button
+                android:id="@+id/ButtonNext_5"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="下一步"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_alignParentRight="true">
+            </Button>
+
+        </RelativeLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_D17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/RelativeLay_D1">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="    \n     \n    \n    \n    \n    \n    \n    \n    \n">
+                </TextView>
+
+            </TableRow>
+
+        </TableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>
