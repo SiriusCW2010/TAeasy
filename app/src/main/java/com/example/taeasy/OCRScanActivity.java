@@ -1,12 +1,14 @@
 package com.example.taeasy;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.SparseArray;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.annotation.NonNull;
@@ -22,10 +24,15 @@ import java.io.IOException;
 
 public class OCRScanActivity extends AppCompatActivity {
 
+    //For OCR Get String
     SurfaceView SurView_2;
     EditText D1_name;
+    EditText D1_DL;
     CameraSource cameraSource;
     final int RequestCameraPermissionID = 1001;
+
+    //For Get String to Activity_5
+    Button confirm_button2;
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -53,9 +60,33 @@ public class OCRScanActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ocrscan);
 
+        //For OCR Function
         SurView_2 = (SurfaceView) findViewById(R.id.SurView_2);
         D1_name = (EditText) findViewById(R.id.D1_name_OCR);
+        D1_DL = (EditText) findViewById(R.id.D1_driving_lic);
 
+        //For Confirm Button
+        confirm_button2 = findViewById(R.id.confirm_button2);
+
+        //Send Text to RecordActivity5 -> D1_Name with Button
+        confirm_button2.setOnClickListener(v -> {
+
+            String D1_name_OCR = D1_name.getText().toString();
+            Intent intent = new Intent(OCRScanActivity.this, RecordActivity5.class);
+            intent.putExtra("keyD1name", D1_name_OCR);
+            startActivity(intent);
+        });
+
+        //Send Text to RecordActivity5 -> D1_DL with Button
+        confirm_button2.setOnClickListener(v -> {
+
+            String D1_driving_lic = D1_DL.getText().toString();
+            Intent intent = new Intent(OCRScanActivity.this, RecordActivity5.class);
+            intent.putExtra("keyD1DL", D1_driving_lic);
+            startActivity(intent);
+        });
+
+        //For OCR Function
         TextRecognizer textRecognizer = new TextRecognizer.Builder(getApplicationContext()).build();
         if (!textRecognizer.isOperational()){
             Log.w("OCRScanActivity", "Detector dependencies are not yet available");

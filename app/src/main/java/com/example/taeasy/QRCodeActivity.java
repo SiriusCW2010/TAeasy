@@ -25,7 +25,7 @@ import java.io.IOException;
 public class QRCodeActivity extends AppCompatActivity {
 
     SurfaceView SurView_1;
-    TextView TV_V1_Reg;
+    TextView TV_Reg;
     CameraSource cameraSource;
     BarcodeDetector barcodeDetector;
     Button confirm_button1;
@@ -36,16 +36,26 @@ public class QRCodeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_qrcode);
 
         SurView_1 = findViewById(R.id.SurView_1);
-        TV_V1_Reg = findViewById(R.id.TV_V1_Reg);
+        TV_Reg = findViewById(R.id.TV_Reg);
         confirm_button1 = findViewById(R.id.confirm_button1);
 
         //Send Text to RecordActivity5 -> V1_Reg_No with Button
         confirm_button1.setOnClickListener(v -> {
 
-            String V1_Reg = TV_V1_Reg.getText().toString();
+            String V1_Reg = TV_Reg.getText().toString();
 
             Intent intent = new Intent(QRCodeActivity.this, RecordActivity5.class);
             intent.putExtra("keyV1No", V1_Reg);
+            startActivity(intent);
+        });
+
+        //Send Text to RecordActivity5_2 -> V2_Reg_No with Button
+        confirm_button1.setOnClickListener(v -> {
+
+            String V2_Reg = TV_Reg.getText().toString();
+
+            Intent intent = new Intent(QRCodeActivity.this, RecordActivity5_2.class);
+            intent.putExtra("keyV2No", V2_Reg);
             startActivity(intent);
         });
 
@@ -56,7 +66,7 @@ public class QRCodeActivity extends AppCompatActivity {
         }else{
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA},1);
         }
-        TV_V1_Reg.setMovementMethod(ScrollingMovementMethod.getInstance());
+        TV_Reg.setMovementMethod(ScrollingMovementMethod.getInstance());
         barcodeDetector = new BarcodeDetector.Builder(this).setBarcodeFormats(Barcode.QR_CODE).build();
         cameraSource = new CameraSource.Builder(this,barcodeDetector)
                 .setRequestedPreviewSize(300,300)
@@ -96,7 +106,7 @@ public class QRCodeActivity extends AppCompatActivity {
             public void receiveDetections(@NonNull Detector.Detections<Barcode> detections) {
                 final SparseArray<Barcode> qrCodes=detections.getDetectedItems();
                 if(qrCodes.size()!=0){
-                    TV_V1_Reg.post(() -> TV_V1_Reg.setText(
+                    TV_Reg.post(() -> TV_Reg.setText(
                             qrCodes.valueAt(0).displayValue
                     ));
 

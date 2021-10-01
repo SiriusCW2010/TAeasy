@@ -41,7 +41,7 @@ public class RecordActivity extends AppCompatActivity implements LocationListene
 
         //For Next Button-1
         Button buttonNext = findViewById(R.id.ButtonNext);
-        buttonNext.setOnClickListener(V -> openRecordActivity2());
+        buttonNext.setOnClickListener(V -> openRecordActivity5());
 
         //Spinner
         //Regional Traffic RN
@@ -94,8 +94,8 @@ public class RecordActivity extends AppCompatActivity implements LocationListene
     }
 
     //For Next Button-1
-    public void openRecordActivity2(){
-        Intent intent = new Intent (this, RecordActivity2.class);
+    public void openRecordActivity5(){
+        Intent intent = new Intent (this, RecordActivity5.class);
         startActivity(intent);
     }
 
@@ -112,6 +112,7 @@ public class RecordActivity extends AppCompatActivity implements LocationListene
 
     }
 
+    //Show Long+Lat at the bottom
     @Override
     public void onLocationChanged(Location location) {
         Toast.makeText(this, "" + location.getLatitude() + "," + location.getLongitude(), Toast.LENGTH_SHORT).show();
@@ -146,11 +147,11 @@ public class RecordActivity extends AppCompatActivity implements LocationListene
     //For Exit Without Save Message
        public void onBackPressed() {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setTitle("Warning!");
-            builder.setMessage("Exit without saving? ");
+            builder.setTitle("警 告!");
+            builder.setMessage("確定不儲存就離開?");
             builder.setCancelable(false);
-            builder.setPositiveButton("Yes", (dialog, which) -> finish());
-            builder.setNegativeButton("No", (dialog, which) -> dialog.cancel());
+            builder.setPositiveButton("是", (dialog, which) -> finish());
+            builder.setNegativeButton("否", (dialog, which) -> dialog.cancel());
             AlertDialog alertDialog = builder.create();
             alertDialog.show();
         }

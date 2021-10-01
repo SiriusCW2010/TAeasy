@@ -2,10 +2,13 @@ package com.example.taeasy;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
@@ -14,11 +17,32 @@ import androidx.appcompat.app.AppCompatActivity;
 public class RecordActivity3 extends AppCompatActivity {
 
     ImageView ImgView_1;
+    ImageButton imageButton_cam;
+    ImageView RedCross_1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_record3);
+
+        //For Red Cross Function
+        RedCross_1 = (ImageView) findViewById(R.id.Red_cross_1);
+
+        //For Camera Image Button
+        imageButton_cam = (ImageButton) findViewById(R.id.Camera_button);
+        imageButton_cam.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try{
+                    Intent intent = new Intent();
+                    intent.setAction(MediaStore.ACTION_IMAGE_CAPTURE);
+                    startActivity(intent);
+                }
+                catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        });
 
         //For Button Up 2
         Button buttonUp2 = findViewById(R.id.ButtonUp_2);
@@ -66,11 +90,43 @@ public class RecordActivity3 extends AppCompatActivity {
 
 
     }
+
+    //For Red Cross-1
+    float x, y;
+    float dx, dy;
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event){
+
+        if (event.getAction() == MotionEvent.ACTION_DOWN){
+            x = event.getX();
+            y = event.getY();
+        }
+
+        if (event.getAction() == MotionEvent.ACTION_MOVE){
+            dx = event.getX() - x;
+            dy = event.getY() - y;
+
+            //For Red Cross 1
+            RedCross_1.setX(RedCross_1.getX() + dx);
+            RedCross_1.setY(RedCross_1.getY() + dy);
+
+            x = event.getX();
+            y = event.getY();
+
+        }
+
+        return super.onTouchEvent(event);
+
+    }
+
+    //For Open RecordActivity2
     public void openRecordActivity2(){
         Intent intent = new Intent (this, RecordActivity2.class);
         startActivity(intent);
     }
 
+    //For Open RecordActivity4
     public void openRecordActivity4(){
         Intent intent = new Intent (this, RecordActivity4.class);
         startActivity(intent);
