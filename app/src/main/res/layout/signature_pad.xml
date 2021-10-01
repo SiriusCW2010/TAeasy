@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:sign="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    tools:context=".NSignaturePad">
+
+        <com.kyanogen.signatureview.SignatureView
+            android:id="@+id/signature_pad"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            sign:backgroundColor="@color/white"
+            sign:penColor="@color/black"
+            sign:penSize="5dp"
+            sign:enableSignature="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/Sign_remind"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:text="(請 在 此 處 簽 署)"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signature_pad"/>
+
+    <RelativeLayout
+        android:id="@+id/RelativeLay_sign2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintTop_toBottomOf="@id/Sign_remind">
+
+        <Button
+            android:id="@+id/Save_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:text="確 定"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/Clear_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:backgroundTint="#FF0000"
+            android:text="清 除"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

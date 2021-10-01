@@ -7,13 +7,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_watermark_4_8_0"
-    tools:context=".RecordActivity5">
+    tools:context=".UploadListActivity">
 
     <ImageView
-        android:id="@+id/icon_e284"
+        android:id="@+id/icon_list_view"
         android:layout_width="54dp"
         android:layout_height="54dp"
-        android:src="@drawable/e284"
+        android:src="@drawable/list_view"
         app:layout_constraintHorizontal_bias="0.057"
         app:layout_constraintVertical_bias="0.04"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,24 +22,24 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        android:id="@+id/record5_title"
+        android:id="@+id/up_list_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="e284A Accident Record\ne284A交通意外紀錄"
+        android:text="Uploaded Report List\n上載報告清單"
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.363"
+        app:layout_constraintHorizontal_bias="0.35"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.05" />
 
     <TextView
-        android:id="@+id/title_PartD"
+        android:id="@+id/title_up_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Part B 第二部份 \n *****涉事車輛、司機、乘客詳情及事件簡述 (V1)*****"
+        android:text="可瀏覽最近8小時內處理之交通意外"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -52,17 +52,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.14"/>
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        tools:context=".RecordActivity5"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title_PartD">
-
-        <include layout="@layout/content_scrolling2" />
-
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <ListView
+            android:id="@+id/uploaded_list"
+            android:layout_width="match_parent"
+            android:layout_height="580dp"
+            android:scrollbars="vertical"
+            android:layout_marginTop="10dp"
+            tools:listitem="@layout/list_view_item"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_up_list"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

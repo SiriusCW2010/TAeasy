@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_watermark_4_8_0"
     tools:context=".NeedToKnow">
 
     <ImageView
@@ -63,7 +64,7 @@
     <ScrollView
         android:id="@+id/scrollView_1"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="520dp"
         android:orientation="vertical"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
@@ -80,7 +81,6 @@
             android:textColor="@color/black"/>
 
     </ScrollView>
-
 
     <TableLayout
         android:id="@+id/Tab_lay_2"

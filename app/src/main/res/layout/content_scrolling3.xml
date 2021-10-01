@@ -1,0 +1,967 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".RecordActivity6"
+    tools:showIn="@layout/activity_record6">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_P1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1. V1乘客詳情"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_P2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_P1">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_P1_1"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="乘客(1)姓名"
+                    app:helperTextTextColor="#FF0000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/V1P1_name"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapCharacters">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:text="  "/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_P1_2"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="乘客(1)電話"
+                    app:helperTextTextColor="#FF0000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/V1P1_phone"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="8">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:text="  "/>
+
+                <ImageButton
+                    android:id="@+id/card_scan_V1P1"
+                    android:layout_height="50dp"
+                    android:layout_width="50dp"
+                    android:src="@drawable/card_scan_icon"
+                    android:background="#00FFFFFF"
+                    android:scaleType="centerInside"
+                    android:layout_gravity="center_vertical"
+                    android:layout_alignParentRight="true"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_P3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_P2">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_V1P1_id"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="乘客(1)身份證號碼"
+                    app:helperTextTextColor="#FF0000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/V1P1_id"
+                        android:layout_width="285dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapCharacters">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_P4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_P3">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_P1_3"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="乘客(1)地址"
+                    app:helperTextTextColor="#FF0000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/Pass1_1address"
+                        android:layout_width="355dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapCharacters">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_P5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_P4">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_P2_1"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="乘客(2)姓名"
+                    app:helperTextTextColor="#FF0000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/V1P2_name"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapCharacters">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:text="  "/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_P2_2"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="乘客(2)電話"
+                    app:helperTextTextColor="#FF0000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/V1P2_phone"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="8">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:text="  "/>
+
+                <ImageButton
+                    android:id="@+id/card_scan_V1P2"
+                    android:layout_height="50dp"
+                    android:layout_width="50dp"
+                    android:src="@drawable/card_scan_icon"
+                    android:background="#00FFFFFF"
+                    android:scaleType="centerInside"
+                    android:layout_gravity="center_vertical"
+                    android:layout_alignParentRight="true"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_P6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_P5">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_P2_id"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="乘客(2)身份證號碼"
+                    app:helperTextTextColor="#FF0000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/V1P2_id"
+                        android:layout_width="285dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapCharacters">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_P7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_P6">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_P2_3"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="乘客(2)地址"
+                    app:helperTextTextColor="#FF0000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/V1P2_address"
+                        android:layout_width="355dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapCharacters">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_P8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_P7">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_P3_1"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="乘客(3)姓名"
+                    app:helperTextTextColor="#FF0000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/V1P3_name"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapCharacters">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:text="  "/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_P3_2"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="乘客(3)電話"
+                    app:helperTextTextColor="#FF0000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/V1P3_phone"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="8">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:text="  "/>
+
+                <ImageButton
+                    android:id="@+id/card_scan_V1P3"
+                    android:layout_height="50dp"
+                    android:layout_width="50dp"
+                    android:src="@drawable/card_scan_icon"
+                    android:background="#00FFFFFF"
+                    android:scaleType="centerInside"
+                    android:layout_gravity="center_vertical"
+                    android:layout_alignParentRight="true"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_P9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_P8">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_P3_id"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="乘客(3)身份證號碼"
+                    app:helperTextTextColor="#FF0000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/V1P3_id"
+                        android:layout_width="285dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapCharacters">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_P10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_P9">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_P3_3"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="乘客(3)地址"
+                    app:helperTextTextColor="#FF0000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/V1P3_address"
+                        android:layout_width="355dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapCharacters">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_P11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_P10">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2. V2乘客詳情"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_P12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_P11">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_P4_A"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="乘客(1)姓名"
+                    app:helperTextTextColor="#FF0000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/V2P1_name"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapCharacters">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:text="  "/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_P4_B"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="乘客(1)電話"
+                    app:helperTextTextColor="#FF0000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/V2P1_phone"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="8">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:text="  "/>
+
+                <ImageButton
+                    android:id="@+id/card_scan_V2P1"
+                    android:layout_height="50dp"
+                    android:layout_width="50dp"
+                    android:src="@drawable/card_scan_icon"
+                    android:background="#00FFFFFF"
+                    android:scaleType="centerInside"
+                    android:layout_gravity="center_vertical"
+                    android:layout_alignParentRight="true"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+    <TableLayout
+        android:id="@+id/Tab_Lay_P13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Tab_Lay_P12">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout_V2P1_id"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="乘客(1)身份證號碼"
+            app:helperTextTextColor="#FF0000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/V2P1_id"
+                android:layout_width="285dp"
+                android:layout_height="wrap_content"
+                android:inputType="textCapCharacters">
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </TableRow>
+
+</TableLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_P14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_P13">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_P4_C"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="乘客(1)地址"
+                    app:helperTextTextColor="#FF0000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/V2P1_address"
+                        android:layout_width="355dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapCharacters">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_P15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_P14">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_P5_A"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="乘客(2)姓名"
+                    app:helperTextTextColor="#FF0000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/V2P2_name"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapCharacters">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:text="  "/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_P5_B"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="乘客(2)電話"
+                    app:helperTextTextColor="#FF0000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/V2P2_phone"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="8">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:text="  "/>
+
+                <ImageButton
+                    android:id="@+id/card_scan_V2P2"
+                    android:layout_height="50dp"
+                    android:layout_width="50dp"
+                    android:src="@drawable/card_scan_icon"
+                    android:background="#00FFFFFF"
+                    android:scaleType="centerInside"
+                    android:layout_gravity="center_vertical"
+                    android:layout_alignParentRight="true"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+    <TableLayout
+        android:id="@+id/Tab_Lay_P16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Tab_Lay_P15">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_V2P2_id"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="乘客(2)身份證號碼"
+                app:helperTextTextColor="#FF0000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/V2P2_id"
+                    android:layout_width="285dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapCharacters">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </TableRow>
+
+    </TableLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_P17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_P16">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_P5_C"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="乘客(2)地址"
+                    app:helperTextTextColor="#FF0000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/V2P2_address"
+                        android:layout_width="355dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapCharacters">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_P18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_P17">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_P6_A"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="乘客(3)姓名"
+                    app:helperTextTextColor="#FF0000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/V2P3_name"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapCharacters">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:text="  "/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_P6_B"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="乘客(3)電話"
+                    app:helperTextTextColor="#FF0000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/V2P3_phone"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="8">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:text="  "/>
+
+                <ImageButton
+                    android:id="@+id/card_scan_V2P3"
+                    android:layout_height="50dp"
+                    android:layout_width="50dp"
+                    android:src="@drawable/card_scan_icon"
+                    android:background="#00FFFFFF"
+                    android:scaleType="centerInside"
+                    android:layout_gravity="center_vertical"
+                    android:layout_alignParentRight="true"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+    <TableLayout
+        android:id="@+id/Tab_Lay_P19"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Tab_Lay_P18">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_V2P3_id"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="乘客(3)身份證號碼"
+                app:helperTextTextColor="#FF0000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/V2P3_id"
+                    android:layout_width="285dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapCharacters">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </TableRow>
+
+    </TableLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_P20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_P19">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_P6_C"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="乘客(3)地址"
+                    app:helperTextTextColor="#FF0000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/V2P3_address"
+                        android:layout_width="355dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapCharacters">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <RelativeLayout
+            android:id="@+id/RelativeLay_P1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:stretchColumns="0"
+            app:layout_constraintTop_toBottomOf="@id/Tab_Lay_P20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <Button
+                android:id="@+id/ButtonUp_6"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="上一步"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_alignParentLeft="true">
+            </Button>
+
+            <Button
+                android:id="@+id/ButtonNext_7"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="下一步"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_alignParentRight="true">
+            </Button>
+
+        </RelativeLayout>
+
+        <TableLayout
+            android:id="@+id/Tab_Lay_Empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/RelativeLay_P1">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="    \n     \n    \n    \n    \n    \n    \n    \n    \n">
+                </TextView>
+
+            </TableRow>
+
+        </TableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

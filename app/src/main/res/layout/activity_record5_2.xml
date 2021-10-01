@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_watermark_4_8_0"
-    tools:context=".RecordActivity5">
+    tools:context=".RecordActivity5_2">
 
     <ImageView
         android:id="@+id/icon_e284"
@@ -36,10 +35,10 @@
         app:layout_constraintVertical_bias="0.05" />
 
     <TextView
-        android:id="@+id/title_PartD"
+        android:id="@+id/title_PartD_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Part B 第二部份 \n *****涉事車輛、司機、乘客詳情及事件簡述 (V1)*****"
+        android:text="Part B 第二部份 \n ***** 涉事車輛、司機詳情及事件簡述 (V2) *****"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -56,12 +55,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        tools:context=".RecordActivity5"
+        tools:context=".RecordActivity5_2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title_PartD">
+        app:layout_constraintTop_toBottomOf="@id/title_PartD_2">
 
-        <include layout="@layout/content_scrolling2" />
+        <include layout="@layout/content_scrolling2_2" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

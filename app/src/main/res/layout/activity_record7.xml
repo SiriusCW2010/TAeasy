@@ -7,9 +7,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_watermark_4_8_0"
-    tools:context=".RecordActivity4">
+    tools:context=".RecordActivity7">
 
     <ImageView
+        android:id="@+id/icon_e284"
         android:layout_width="54dp"
         android:layout_height="54dp"
         android:src="@drawable/e284"
@@ -21,6 +22,7 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
+        android:id="@+id/record6_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="e284A Accident Record\ne284A交通意外紀錄"
@@ -33,13 +35,11 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.05" />
 
-
-
     <TextView
-        android:id="@+id/title_PartC2"
+        android:id="@+id/title_PartF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Part D 第四部份 \n ***** 車輛損毀之位置 (V2) *****"
+        android:text="Part F 第六部份 \n ***** 中立證人口供 *****"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -53,94 +53,13 @@
         app:layout_constraintVertical_bias="0.14"/>
 
     <TableLayout
-        android:id="@+id/Tab_lay_18"
+        android:id="@+id/Tab_Lay_W1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.22">
-
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="1">
-
-            <Spinner
-                android:id="@+id/Veh_Cat_2"
-                android:layout_width="240dp"
-                android:layout_height="wrap_content"
-                android:drawSelectorOnTop="true"
-                android:spinnerMode="dropdown"
-                android:layout_gravity="center"
-                android:textSize="16sp"/>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout_4"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:hint="V2車牌號碼"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/V2_Reg_No"
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:maxLength="8">
-                </com.google.android.material.textfield.TextInputEditText>
-            </com.google.android.material.textfield.TextInputLayout>
-
-        </TableRow>
-
-    </TableLayout>
-
-
-    <ImageView
-        android:id="@+id/ImgView_2"
-        android:layout_width="340dp"
-        android:layout_height="380dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_centerInParent="true"
-        app:layout_constraintTop_toBottomOf="@id/Tab_lay_18"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0">
-    </ImageView>
-
-    <ImageView
-        android:id="@+id/Red_cross_2"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="310dp"
-        android:src="@drawable/red_cross"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.026"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-
-    <TableLayout
-        android:id="@+id/tableLay_drag_2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        app:layout_constraintTop_toBottomOf="@id/ImgView_2"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/RelativeLay2">
+        app:layout_constraintTop_toBottomOf="@id/title_PartF">
 
         <TableRow
             android:layout_width="match_parent"
@@ -151,51 +70,83 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="請將 "
-                android:textSize="16dp"
-                android:textStyle="bold"
+                android:text="1. 證人口供內容"
+                android:textSize="16sp"
                 android:textColor="@color/black"
-                android:layout_gravity="center_vertical"/>
+                android:textStyle="bold"/>
 
-            <ImageView
-                android:id="@+id/Red_cross"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/red_cross" />
+        </TableRow>
 
-            <TextView
-                android:text=" 拖放至損毀位置或拍照 "
-                android:textSize="16dp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:layout_gravity="center_vertical"/>
+    </TableLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Tab_Lay_W2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Tab_Lay_W1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Wit_statement"
+            android:layout_width="match_parent"
+            android:layout_height="430dp"
+            android:inputType="textMultiLine"
+            android:textColor="@color/black"
+            android:scrollbars="vertical"
+            android:gravity="left|top">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TableLayout
+        android:id="@+id/Tab_Lay_W3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Tab_Lay_W2">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:gravity="center">
 
             <ImageButton
-                android:id="@+id/Camera_button2"
-                android:layout_height="40dp"
-                android:layout_width="40dp"
+                android:id="@+id/speech_text_1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/speech_to_text"
                 android:scaleType="centerInside"
-                android:background="#00FFFFFF"
-                android:src="@drawable/camera_small" />
+                android:background="#00FFFFFF" />
 
         </TableRow>
 
     </TableLayout>
 
     <RelativeLayout
-        android:id="@+id/RelativeLay2"
+        android:id="@+id/RelativeLay_W1"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginTop="5dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/tableLay_drag_2"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:stretchColumns="0"
+        app:layout_constraintTop_toBottomOf="@id/Tab_Lay_W3"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
 
         <Button
-            android:id="@+id/ButtonUp_3"
+            android:id="@+id/ButtonUp_7"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:text="上一步"
@@ -205,7 +156,7 @@
         </Button>
 
         <Button
-            android:id="@+id/ButtonNext_4"
+            android:id="@+id/ButtonNext_8"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:text="下一步"
@@ -215,5 +166,6 @@
         </Button>
 
     </RelativeLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

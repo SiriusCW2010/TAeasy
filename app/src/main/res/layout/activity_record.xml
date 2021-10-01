@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_watermark_4_8_0"
     tools:context=".RecordActivity">
 
     <ImageView
@@ -21,7 +22,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="e284A Accident Record"
+        android:text="e284A Accident Record\ne284A交通意外紀錄"
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -30,19 +31,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.047" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="e284A交通意外紀錄"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.334"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.075" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -234,7 +222,7 @@
                     android:id="@+id/V1_Reg_No"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:inputType="text"
+                    android:inputType="textCapCharacters"
                     android:maxLength="8">
                 </com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
@@ -279,7 +267,7 @@
                     android:id="@+id/V2_Reg_No"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:inputType="text"
+                    android:inputType="textCapCharacters"
                     android:maxLength="8">
                 </com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
@@ -401,7 +389,7 @@
                     android:id="@+id/officer_name"
                     android:layout_width="320dp"
                     android:layout_height="wrap_content"
-                    android:inputType="text">
+                    android:inputType="textCapCharacters">
                 </com.google.android.material.textfield.TextInputEditText>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -457,7 +445,7 @@
                     android:id="@+id/officer_rank"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:inputType="text">
+                    android:inputType="textCapCharacters">
                 </com.google.android.material.textfield.TextInputEditText>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -508,15 +496,14 @@
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="parent">
 
-         <Button
-            android:id="@+id/ButtonNext"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:text="下一步"
-            android:textStyle="bold"
-            android:layout_gravity="center"
-            android:layout_alignParentRight="true">
-        </Button>
+    <Button
+        android:id="@+id/ButtonNext"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:text="下一步"
+        android:textStyle="bold"></Button>
 
 </RelativeLayout>
 
