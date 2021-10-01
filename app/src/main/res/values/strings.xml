@@ -1,0 +1,131 @@
+<resources>
+
+    <string name="app_name">TAeasy</string>
+    <string name="maps_api_key" translatable="false">AIzaSyC9fcewQI9K6gMlfuYyLTulDvCcCvrpKlg</string>
+    <string name="title_activity_need_to_know">ScrollingActivity</string>
+    <string name="version_no">Prototype 4.8.0</string>
+    <string name="notes_text">
+        [Part I 第一項] \n
+        Complete the whole of this e-From if:- \n
+        如有下列任何一種情況，此電子表格各項均須全部填寫:- \n\n
+
+        (i)&#160;&#160;names/address of drivers are not exchanged; or \n
+        (一)&#160;司機之間並無互相交換姓名/地址；\n\n
+
+        (ii)&#160;&#160;an offence is alleged, or a complaint is made by on of the parties; or \n
+        (二)&#160;其中一方指對方違例或提出投訴；\n\n
+
+        (iii)&#160;&#160;any horse, cattle, ass, mule, sheep, pig or goat is injured; \n
+        (三)&#160;任何馬、牛、驢、騾、綿羊、豬或山羊因而受傷；\n\n
+
+        (iv)&#160;&#160;damage to property occurs and the owner of it is not present or, if present, is not willing to settle with the driver. \n
+        (四)&#160;有財物被損毀而物主並不在場，或在場時但不願意和司機和解。\n\n\n
+
+        [Part II 第二項] \n
+        Do not complete this e-Form, but call AIT if:- \n
+        如有下列任何一種情況，此電子表格不須填寫，但須通知交通意外調查組:- \n\n
+
+        (i)&#160;&#160;three or more vehicles are involved; or \n
+        (一)&#160;牽涉三部或以上車輛； \n\n
+
+        (ii)&#160;&#160;a government vehicle or military vehicle is involved with a third party orr where injury occurs to any party; \n
+        (二)&#160;牽涉一部政府車輛或解放軍車輛，第三者或當場任何人受傷； \n\n
+
+        (iii)&#160;&#160;where any party is injured. \n
+        (三)&#160;在事件中，任何一方因而受傷。 \n\n\n
+
+        [Part III 第三項] \n
+        If necessary:- \n
+        在必要時:- \n\n
+
+        (i)&#160;&#160;Call an ambulance and give first aid; \n
+        (一)&#160;召喚救護車並施行急救；\n\n
+
+        (ii)&#160;&#160;Move involved vehicles to the side of the road; \n
+        (二)&#160;將肇事車輛移至路旁；\n\n
+
+        (iii)&#160;&#160;Identify independent witness; \n
+        (三)&#160;找出中立證人；\n\n
+
+        (iv)&#160;&#160;Control traffic. \n
+        (四)&#160;控制現場交通情況。\n\n\n
+
+    </string>
+
+    <string name="partH_review">
+        Part A 第一部份\n
+        初步資料\n
+        \n
+        \n
+        \n
+        \n
+        \n
+        \n
+        Part B 第二部份\n
+        涉事車輛、司機、乘客詳情及事件簡述(D1)\n
+        \n
+        \n
+        \n
+        \n
+        \n
+        \n
+        涉事車輛、司機、乘客詳情及事件簡述(D2)\n
+        \n
+        \n
+        \n
+        \n
+        \n
+        \n
+        Part C 第三部份\n
+        意外現場狀態\n
+        \n
+        \n
+        \n
+        \n
+        \n
+        \n
+        Part D 第四部份\n
+        車輛損毀位置(V1)\n
+        \n
+        \n
+        \n
+        \n
+        \n
+        \n
+        車輛損毀位置(V2)\n
+        \n
+        \n
+        \n
+        \n
+        \n
+        \n
+        Part E 第五部份\n
+        涉事車輛乘客詳情\n
+        \n
+        \n
+        \n
+        \n
+        \n
+        \n
+        Part F 第六部份\n
+        中立證人口供\n
+        \n
+        \n
+        \n
+        \n
+        \n
+        \n
+        Part G 第七部份\n
+        填寫人員之觀察報告\n
+        \n
+        \n
+        \n
+        \n
+        \n
+        \n
+    </string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_record5">ScrollingActivity</string>
+    <string name="disclaimer_chi">警務處處長將本供詞的副本及個人資料，發給與今次交通意外真正直接有關係的任何一方、其代表律師及/或承保人。</string>
+</resources>
