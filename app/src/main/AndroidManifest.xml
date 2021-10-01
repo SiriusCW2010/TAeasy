@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.taeasy">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="TAeasy"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TAeasy">
+        <activity
+            android:name=".NSignaturePad"
+            android:exported="true"
+            android:screenOrientation="landscape"/>
+
+        <activity android:name=".PhoneListActivity" />
+
+        <activity android:name=".RecordView" />
+
+        <activity android:name=".UploadListActivity" />
+
+        <activity android:name=".RecordActivity9" />
+
+        <activity android:name=".RecordActivity8" />
+
+        <activity android:name=".RecordActivity7" />
+
+        <activity android:name=".RecordActivity6" />
+
+        <activity android:name=".RecordActivity5_2" />
+
+        <activity
+            android:name=".SpeechToTextActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OCRScanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".QRCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RecordActivity5"
+            android:label="@string/title_activity_record5"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TAeasy.NoActionBar" />
+        <activity
+            android:name=".RecordActivity4"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RecordActivity3"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NeedToKnow"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MapsActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RecordActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode,ocr" />
+    </application>
+
+</manifest>
